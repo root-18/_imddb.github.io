@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+header {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 30%;
+  margin-left: 2%;
+}
+
+ul {
+  margin-right: 2%;
+}
+
+li {
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.nav-e {
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 10px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+}
+
+.nav-e:hover {
+  background-color: red;
+}
+
+.container {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#autotext {
+  margin-top: 15%;
+  z-index: 1;
+  color: white;
+  position: absolute;
+  border-right: 0.15em solid red;
+  animation: blink 0.75s step-end infinite;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: red;
+  }
+}
+
+section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(./wave.png);
+  background-size: 1000px 100px;
+}
+
+section .wave.w_1 {
+  animation: animate 15s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+section .wave.w_2 {
+  animation: animate2 7s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+section .wave.w_3 {
+  animation: animate3 4s linear infinite;
+  z-index: 998;
+  opacity: 0.5;
+  animation-delay: -10s;
+  bottom: 20px;
+}
+
+@keyframes animate3 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+section .wave.w_4 {
+  animation: animate4 2s linear infinite;
+  z-index: 997;
+  opacity: 0.5;
+  animation-delay: -15s;
+  bottom: 30px;
+}
+
+@keyframes animate4 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+.burger{
+  position: absolute;
+}
+
+@media screen and (max-width: 550px) {
+
+  #autotext{
+    margin-top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-e{
+    opacity: 0;
+  }
+
+  .burger{
+    height: 40px;
+    width: 50px ;
+    right: 20px;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .bar1, .bar2, .bar3{
+    height: 4px;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .bar1.active{
+    transform: translateY(18px) rotate(45deg);
+  }
+  
+  .bar3.active{
+    transform: translateY(-18px) rotate(-45deg);
+  }
+  
+  .bar2.active{
+    opacity: 0;
+  }
+
+}

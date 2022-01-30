@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  top: 0;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-e {
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.nav-e:nth-child(2) {
+  cursor: pointer;
+  transform: translateY(2px);
+  border-bottom: 2px solid red;
+}
+
+.nav-e:nth-child(1):hover {
+  border-bottom: 2px solid red;
+  cursor: pointer;
+  transform: translateY(2px);
+}
+.nav-e:nth-child(3):hover {
+  border-bottom: 2px solid red;
+  cursor: pointer;
+  transform: translateY(2px);
+}
+.nav-e:nth-child(4):hover {
+  border-bottom: 2px solid red;
+  cursor: pointer;
+  transform: translateY(2px);
+}
+
+.logo {
+  color: red;
+}
+
+li {
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.ligne {
+  height: 2px;
+  width: 100%;
+  align-self: flex-end;
+  position: absolute;
+  background-color: red;
+}
+
+.container {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+}
+
+.tools {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-film {
+  height: 3.5vh;
+  width: 30vh;
+  background-color: black;
+  color: white;
+  margin-top: 10%;
+  margin-left: 10%;
+  border-color: red;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cards_f {
+  height: 95%;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  vertical-align: top;
+  align-self: center;
+}
+
+svg path,
+svg rect{
+  fill: #FF0000
+}
+
+.card_f {
+  height: 40vh;
+  width: calc(20% - 2rem);
+  min-width: 20vh;
+  margin-bottom: 2vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px grey;
+  position: relative;
+  cursor: pointer;
+}
+
+.card_f:hover {
+  transform: translateY(-10px);
+}
+
+.img_f {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.infos_f {
+  height: 10vh;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.8;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: grey;
+}
+
+.tittle_f {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
